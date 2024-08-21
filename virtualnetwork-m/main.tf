@@ -32,6 +32,6 @@ resource "azurerm_subnet" "prod_subnets" {
   address_prefixes = [each.value.address_prefix]
   virtual_network_name = azurerm_virtual_network.azvnet.name
   resource_group_name = module.resource_grp_name.resourcegrp_name
-  
+  depends_on = [ azurerm_virtual_network.azvnet ]
   
 }
