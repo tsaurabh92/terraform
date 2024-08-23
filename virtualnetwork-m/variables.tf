@@ -63,5 +63,11 @@ variable "subnets" {
 
 
     }
+    subnet4={
+      name= "monitoring-subnet"
+      address_prefix = "10.112.144.96/27"
+
+
+    }
   }
 }
