@@ -8,10 +8,11 @@ variable "resourcegroupName" {
 variable "location" {
     type = string
     description = "Location for RM Ressources"
+    default = "eastus"
 
     validation {
       condition = var.location == "eastus"
-      error_message = "You are not creating resourcen in East US"
+      error_message = "You are not creating resource in East US"
     }
   
 }
